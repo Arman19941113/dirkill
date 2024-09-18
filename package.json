@@ -1,0 +1,24 @@
+{
+  "name": "dirkill",
+  "version": "0.0.3",
+  "description": "A CLI tool to remove directories by name recursively",
+  "type": "module",
+  "main": "src/index.mjs",
+  "bin": "src/index.mjs",
+  "keywords": [
+    "cli tool",
+    "command line tool",
+    "delete directories"
+  ],
+  "license": "MIT",
+  "author": "Arman Tang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arman19941113/dirkill"
+  },
+  "dependencies": {
+    "kolorist": "^1.8.0",
+    "prompts": "^2.4.2",
+    "yargs": "^17.7.2"
+  }
+}
