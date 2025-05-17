@@ -35,7 +35,7 @@ if (!targetDirName) {
       onCancel: () => {
         console.log(lightYellow('Bye!'))
       },
-    },
+    }
   )
   if (dirNameChecker) {
     targetDirName = dirNameChecker
@@ -99,12 +99,12 @@ async function findDirectories(readPath = process.cwd(), targetDirPaths = []) {
 
     for (const dirent of direntList) {
       if (!dirent.isDirectory()) continue
-      if (skipDirNames.includes(dirent.name)) continue
 
       const dirPath = path.join(readPath, dirent.name)
       if (dirent.name === targetDirName) {
         targetDirPaths.push(dirPath)
       } else {
+        if (skipDirNames.includes(dirent.name)) continue
         await findDirectories(dirPath, targetDirPaths)
       }
     }
